@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8X9-oM-So1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="KpH-xX-Cms">
+            <objects>
+                <viewController id="8X9-oM-So1" customClass="ViewController" customModule="DuffSnake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f0B-tv-1px"/>
+                        <viewControllerLayoutGuide type="bottom" id="ziW-mb-xDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QA0-c5-OFI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="f9m-eK-Zow" appends="YES" id="QkI-dh-8AC"/>
+                            <outletCollection property="gestureRecognizers" destination="GCf-pH-g5v" appends="YES" id="JKS-Q6-Vty"/>
+                            <outletCollection property="gestureRecognizers" destination="lyJ-x0-Uux" appends="YES" id="Yoj-Df-7YV"/>
+                            <outletCollection property="gestureRecognizers" destination="fYA-00-SMl" appends="YES" id="A45-xc-w0U"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="leftRightSwipeRecognizer" destination="GCf-pH-g5v" id="eMi-IV-yEU"/>
+                        <outlet property="upDownSwipeRecognizer" destination="f9m-eK-Zow" id="sVz-6V-DOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6g-Is-M7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="f9m-eK-Zow">
+                    <connections>
+                        <action selector="didSwipeRight:" destination="8X9-oM-So1" id="Lme-eD-KEo"/>
+                        <outlet property="delegate" destination="8X9-oM-So1" id="4uX-ss-BSa"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="GCf-pH-g5v">
+                    <connections>
+                        <action selector="didSwipeLeft:" destination="8X9-oM-So1" id="hA6-4j-fG7"/>
+                        <outlet property="delegate" destination="8X9-oM-So1" id="DSZ-da-8yd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="lyJ-x0-Uux">
+                    <connections>
+                        <action selector="didSwipeUp:" destination="8X9-oM-So1" id="AYI-Hf-Roz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="fYA-00-SMl">
+                    <connections>
+                        <action selector="didSwipeDown:" destination="8X9-oM-So1" id="xoY-2Q-Smp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="302" y="367"/>
+        </scene>
+    </scenes>
+</document>
